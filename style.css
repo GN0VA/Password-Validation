@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    inset: 0px;
+    background-color: #151515  ;
+    color: white;
+}
+.Passwordvalidator{
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+    border: .2px solid rgb(217, 176, 255);
+    
+}
+.Passwordvalidator span{
+    position: absolute;
+    display: block;
+    
+}
+.Passwordvalidator span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgb(217, 176, 255);
+    
+    animation: animation1 2s linear infinite;
+}
+
+@keyframes animation1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+        
+    }
+}
+
+.Passwordvalidator span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: rgb(217, 176, 255);
+    animation: animation2 2s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animation2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+        
+    }
+}
+
+.Passwordvalidator span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: rgb(217, 176, 255);
+    animation: animation3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animation3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+        
+    }
+}
+
+.Passwordvalidator span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: rgb(217, 176, 255);
+    animation: animation4 2s linear infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes animation4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+      
+    }
+}
+
+
+.Card-validator{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Card-description {
+text-align: center;
+}
+.Card-description h1{
+    color: rgb(217, 176, 255);
+}
+.Card-form{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.Card-form input[type='text']:focus{
+    outline: none;
+    
+}  
+
+
+.Card-form input[type='text']{
+    
+
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+    color: white;
+    
+}  
+
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 23%;
+    top: 10px;
+    transition: 0.2s ease all;
+    
+   }
+   .Card-form input[type='text']:focus ~ label, 
+   .Card-form input[type='text']:valid ~ label{
+    font-weight: bold;
+    margin-left: -18%;
+    color: rgb(217, 176, 255)
+}
+.Card-Requirements{
+    display: none;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.Card-Requirements div{
+    padding: 5px 10px;
+}
+
+.Card-form input[type='text']:focus ~ .Card-Requirements, 
+   .Card-form input[type='text']:valid ~ .Card-Requirements{
+    display: block;
+}
+
+#Card-rank{
+    color: #151515;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    display: none;
+}

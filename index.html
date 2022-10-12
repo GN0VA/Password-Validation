@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Password Validator</title>
+</head>
+<body>
+    <div class="Passwordvalidator">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="Card-validator">
+            <div class="Card-description">
+                <h1>Password Validator</h1>
+                <div>This page checks the quality of your password.</div>
+            </div>
+            <div class="Card-form">
+                <input onkeyup="validar(this.value)" required="" type="text" class="input">
+                <label >Password</label>
+                
+                    <div class="Card-Requirements">
+                        <h2>Password must contain the following:</h2>
+                        <div id="low">A lowercase letter</div>
+                        <div id="up">A capital (uppercase) letter</div>
+                        <div id="number">A number</div>
+                        <div id="characters">Minimum 8 characters</div>
+                        <div id="Card-rank">
+                            <div></div>
+                        </div>
+                    </div>
+                
+            </div>
+            
+            <hr>
+        </div>
+    </div>
+</body>
+</html>
